@@ -17,6 +17,7 @@ func main() {
 		friday
 		saturday
 	)
+
 	fmt.Println("====  constants ====")
 	fmt.Println("INT_VALUE: ", INT_VALUE)
 	fmt.Println("STRING_VALUE: ", STRING_VALUE)

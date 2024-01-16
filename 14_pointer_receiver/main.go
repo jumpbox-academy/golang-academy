@@ -13,6 +13,7 @@ func (tri triangle) Area() float32 {
 	return PI * tri.radius * tri.radius
 }
 
+// Method with Pointer Receiver
 func (tri *triangle) SetRadius(radius float32) {
 	tri.radius = radius
 }

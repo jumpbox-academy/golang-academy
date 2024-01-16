@@ -18,6 +18,7 @@ func main() {
 		"b": "bird",
 	}
 
+	//add member in map
 	m["key"] = "apple"
 	m["new-key"] = "jumpbox"
 

@@ -24,4 +24,11 @@ func main() {
 
 	fmt.Println("stringReturn:", stringReturn)
 	fmt.Println("stringReturnFormat:", stringReturnFormat)
+
+	// Scenarios 2: cannot assign another type to declared variable
+	// s := "string"
+	// fmt.Println("string:", s)
+	// s := 10
+	// fmt.Println("int:", s)
+
 }

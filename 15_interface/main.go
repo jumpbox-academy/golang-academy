@@ -37,9 +37,9 @@ type String interface {
 	toString() string
 }
 
-type toString string
+type nextString string
 
-func (s toString) toString() string {
+func (s nextString) toString() string {
 	return string(s)
 }
 
@@ -53,19 +53,19 @@ func main() {
 
 	// Scenario 1
 	// declare type interface
-	var testInf interface{}
+	// var testInf interface{}
 
-	testInf = 6 // assign int
-	fmt.Printf("%T %v\n", testInf, testInf)
+	// testInf = 6 // assign int
+	// fmt.Printf("%T %v\n", testInf, testInf)
 
-	testInf = "Jumpbox" // assign string
-	fmt.Printf("%T %v\n", testInf, testInf)
+	// testInf = "Jumpbox" // assign string
+	// fmt.Printf("%T %v\n", testInf, testInf)
 
-	testInf = true // assign boolean
-	fmt.Printf("%T %v\n", testInf, testInf)
+	// testInf = true // assign boolean
+	// fmt.Printf("%T %v\n", testInf, testInf)
 
-	testInf = func() string { return "Jumpbox" } // assign function
-	fmt.Printf("%T %v\n", testInf, testInf)
+	// testInf = func() string { return "Jumpbox" } // assign function
+	// fmt.Printf("%T %v\n", testInf, testInf)
 
 	// Scenarios 2
 	// chicken := Herbivores{}
@@ -83,11 +83,11 @@ func main() {
 
 	// Scenarios 3
 	// Create a toString value
-	// var s String = toString("Hello, Go!")
-	// fmt.Println(s.toString())
+	var s String = nextString("Hello, Go!")
+	fmt.Println(s.toString())
 
-	// // Create an Int value
-	// var i String = Int(42)
-	// fmt.Println(i.toString())
+	// Create an Int value
+	var i String = Int(42)
+	fmt.Println(i.toString())
 
 }

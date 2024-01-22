@@ -4,19 +4,24 @@ import "fmt"
 
 const PI = 3.14
 
-type triangle struct {
+type circle struct {
 	radius float32
 }
 
 // Method
-func (tri triangle) Area() float32 {
-	return PI * tri.radius * tri.radius
+func (c circle) Area() float32 {
+	return PI * c.radius * c.radius
+}
+
+func (c circle) Circumference() float32 {
+	return 2 * PI * c.radius
 }
 
 func main() {
 
-	tri := triangle{
+	c := circle{
 		radius: 3,
 	}
-	fmt.Println("Triangle Area", tri.Area())
+	fmt.Println("Triangle Area", c.Area())
+	fmt.Println("Triangle Circumference", c.Circumference())
 }

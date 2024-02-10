@@ -58,7 +58,7 @@ type Todo struct {
 }
 
 // ป้องกัน gorm ตั้งชื่อไม่ได้เป็นไปตามที่เราต้องการ ด้วยการกำหนดด้วยตัวเอง
-func (Todo) Tablename() string {
+func (Todo) TableName() string {
     return "todos"
 }
 
@@ -69,7 +69,7 @@ type TodoHandler struct {
 
 // สร้าง Structure เพื่อให้ฝั่งคนใช้งานนำไปใช้ รับ db ที่เป็น gorm.DB
 func NewTodoHandler (db *gorm.DB) *TodoHandler {
-    return &TodoHandler(db: db)
+    return &TodoHandler{db: db}
 }
 
 // สร้าง Handler
